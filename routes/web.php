@@ -26,18 +26,25 @@ Route::get('/sample/{id}',  [\App\Http\Controllers\Sample\IndexController::class
 Route::get('/tweet', \App\Http\Controllers\Tweet\IndexController::class)
     ->name('tweet.index');
 
-Route::get('/tweet/update/{tweetId}', \App\Http\Controllers\Tweet\Update\IndexController::class)
-    ->name('tweet.update.index');
+Route::middleware('auth')->group(function () {
+    // 新規作成
+    Route::post('/tweet/create', \App\Http\Controllers\Tweet\CreateController::class)
+        ->name('tweet.create');
 
-Route::put('/tweet/update/{tweetId}', \App\Http\Controllers\Tweet\Update\PutController::class)
-    ->name('tweet.update.put');
+    // 更新ページ
+    Route::get('/tweet/update/{tweetId}', \App\Http\Controllers\Tweet\Update\IndexController::class)
+        ->name('tweet.update.index');
 
-Route::post('/tweet/create', \App\Http\Controllers\Tweet\CreateController::class)
-    ->middleware('auth')
-    ->name('tweet.create');
+    // 更新処理
+    Route::put('/tweet/update/{tweetId}', \App\Http\Controllers\Tweet\Update\PutController::class)
+        ->name('tweet.update.put');
 
-Route::delete('/tweet/delete/{tweetId}', \App\Http\Controllers\Tweet\DeleteController::class)
-    ->name('tweet.delete');
+    // 削除処理
+    Route::delete('/tweet/delete/{tweetId}', \App\Http\Controllers\Tweet\DeleteController::class)
+        ->name('tweet.delete');
+});
+
+
 
 
 Route::get('/dashboard', function () {
