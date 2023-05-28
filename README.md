@@ -1,3 +1,5 @@
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -5,6 +7,13 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
+
+<p>
+<a href="https://www.amazon.co.jp/%E3%83%97%E3%83%AD%E3%83%95%E3%82%A7%E3%83%83%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%ABWeb%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0-Laravel%E3%80%88%E6%9C%80%E6%96%B0Laravel-9%E5%AF%BE%E5%BF%9C%E3%80%89-%E4%B9%85%E4%BF%9D%E7%94%B0-%E8%B3%A2%E4%BA%8C%E6%9C%97/dp/4295202835/ref=sr_1_4?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=2K639QGWKB5P1&keywords=laravel+9&qid=1685268993&sprefix=laravel+9%2Caps%2C310&sr=8-4">
+教本
+</a>を利用してLaravelを勉強するためのリポジトリ
+（Laravelのバージョンは１０系を使用している）
 </p>
 
 ## About Laravel
