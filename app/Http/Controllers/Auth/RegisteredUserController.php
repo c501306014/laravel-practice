@@ -53,7 +53,7 @@ class RegisteredUserController extends Controller
         foreach ($allUser as $user) {
             $mailer->to($user->email)
                 ->send(new NewUserIntroduction($user, $newUser));
-            return redirect(RouteServiceProvider::HOME);
         }
+        return redirect(RouteServiceProvider::HOME);
     }
 }
