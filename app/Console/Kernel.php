@@ -14,7 +14,8 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')->hourly();
         // 毎分
-        $schedule->command('sample-command')->everyMinute();
+        $schedule->command('sample-command')->everyMinute()
+            ->emailOutputTo('info@example.com');
     }
 
     /**
@@ -22,7 +23,7 @@ class Kernel extends ConsoleKernel
      */
     protected function commands(): void
     {
-        $this->load(__DIR__.'/Commands');
+        $this->load(__DIR__ . '/Commands');
 
         require base_path('routes/console.php');
     }
