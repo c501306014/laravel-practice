@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Tweet extends Model
 {
@@ -20,10 +21,8 @@ class Tweet extends Model
 
     /**
      * 中間テーブルを利用してImageモデルとのリレーションを張る
-     *
-     * @return void
      */
-    public function images()
+    public function images(): BelongsToMany
     {
         return $this->belongsToMany(Image::class, 'tweet_images')
             ->using(TweetImage::class);
