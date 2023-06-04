@@ -25,10 +25,10 @@ jobs:
           MYSQL_PASSWORD: ${{ env.DB_PASSWORD }}
           MYSQL_ALLOW_EMPTY_PASSWORD: 1
         options: >-
-        --health-cmd "mysqladmin ping"
-        --health-interval 10s
-        --health-timeout 5s
-        --health-retries 5
+          --health-cmd "mysqladmin ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
       
     steps:
       - uses: actions/checkout@v2
