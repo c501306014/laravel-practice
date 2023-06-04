@@ -17,4 +17,15 @@ class Tweet extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    /**
+     * 中間テーブルを利用してImageモデルとのリレーションを張る
+     *
+     * @return void
+     */
+    public function images()
+    {
+        return $this->belongsToMany(Image::class, 'tweet_images')
+            ->using(TweetImage::class);
+    }
 }
