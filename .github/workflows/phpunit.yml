@@ -17,7 +17,7 @@ jobs:
     services:
       mysql.test:
         image: 'mysql/mysql-server:8.0'
-        prots:
+        ports:
           - 3306:3306
         env:
           MYSQL_DATABASE: 'example_app'
@@ -25,10 +25,10 @@ jobs:
           MYSQL_PASSWORD: ${{ env.DB_PASSWORD }}
           MYSQL_ALLOW_EMPTY_PASSWORD: 1
         options: >-
-          --health-cmd "mysqladmin ping"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
+        --health-cmd "mysqladmin ping"
+        --health-interval 10s
+        --health-timeout 5s
+        --health-retries 5
       
     steps:
       - uses: actions/checkout@v2
@@ -46,5 +46,5 @@ jobs:
       run: php artisan key:generate --env testing
       - name: Set hostname
       run: sudo echo "127.0.0.1 mysql.test" | sudo tee -a /etc/hosts
-      -name: Execute tests (Unit and Feature tests) via PHPUnit
+      - name: Execute tests (Unit and Feature tests) via PHPUnit
       run: vendor/bin/phpunit
